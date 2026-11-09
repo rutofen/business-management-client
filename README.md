@@ -1,30 +1,35 @@
-# React + TypeScript + Vite
+# Business Management · Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The client side of an appointment booking system for a small business.
+Customers can browse the business services, view a gallery and book a meeting.
+The business owner gets an admin area to manage the business details, services, meetings and users.
 
-Currently, two official plugins are available:
+The server is in [business-management-api](https://github.com/rutofen/business-management-api).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 👥 Team project
 
-## Expanding the ESLint configuration
+Built together with [leahssss](https://github.com/leahssss).
+We both worked on the whole project, client and server.
+The code was uploaded from her account at the end of the project.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- Sign up and sign in, with the session kept in a React context
+- Customer area: home page, services, gallery and meeting booking with a date and time picker
+- Admin area: business details, services, meeting list and users
+- API calls with Axios
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Tech
+
+React 18 · TypeScript · Vite · React Router · Axios · ESLint
+
+## Run locally
+
+```bash
+git clone https://github.com/rutofen/business-management-client.git
+cd business-management-client
+npm install
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Set `VITE_APP_URL` in `src/.env` to the address of the server.
